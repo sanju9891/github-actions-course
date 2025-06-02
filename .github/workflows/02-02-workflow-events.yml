@@ -1,6 +1,7 @@
-on:
-  push:
-    branches:
-      - main
-      - release/*
-      
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Use Workflow Input
+        run: |
+          echo "Input Value: ${{ inputs.my_input }}"
