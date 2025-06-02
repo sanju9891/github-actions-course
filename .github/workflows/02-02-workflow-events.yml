@@ -1,7 +1,10 @@
+name: Testing new Repo.
+
 on:
-  pull_request:
+  push:
     branches:
       - main
+      - release/*
 
 jobs:
   build:
