@@ -18,3 +18,6 @@ jobs:
       - name: Use Workflow Variable
         run: |
           echo "Workflow Variable Value: ${{ steps.set_var.outputs.name }}"
+      - name: Get host name
+        run: |
+          echo $hostname
