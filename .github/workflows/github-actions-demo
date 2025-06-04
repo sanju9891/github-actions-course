@@ -1,3 +1,5 @@
+### To start this job have to add extension .yml
+
 name: GitHub Action Demo
 run-name: ${{ github.actor }} is testing out Github Action.
 on: [push]
