@@ -1,0 +1,32 @@
+name: Playwright Tests
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - main
+      - master
+  workflow_dispatch:
+    inputs:
+      shards:
+        description: 'Number of shards'
+        required: true
+        default: '3'
+      workers:
+        description: 'Number of workers'
+        required: false
+      tags:
+        description: 'Tags to filter tests'
+        required: false
+      retries:
+        description: 'Number of retries'
+        required: false
+      environment:
+        description: 'Deployment environment'
+        type: choice
+        default: 'local'
+        options:
+          - local
+          - dev
+          - staging
+          - uat
